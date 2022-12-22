@@ -80,10 +80,10 @@ defmodule Wax.Challenge do
     unless is_binary(opts[:origin]),
       do: raise("Missing mandatory parameter `origin` (String.t())")
 
-    unless URI.parse(opts[:origin]).host == "localhost" or
-             URI.parse(opts[:origin]).scheme == "https" do
-      raise "Invalid origin `#{opts[:origin]}` (must be either https scheme or `localhost`)"
-    end
+    #unless URI.parse(opts[:origin]).host == "localhost" or
+    #         URI.parse(opts[:origin]).scheme == "https" do
+    #  raise "Invalid origin `#{opts[:origin]}` (must be either https scheme or `localhost`)"
+    #end
 
     unless is_binary(opts[:rp_id]) or opts[:rp_id] == :auto do
       raise "Missing mandatory parameter `rp_id` (String.t())"
